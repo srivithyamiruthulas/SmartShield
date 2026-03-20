@@ -46,11 +46,11 @@ export default function PlanSelectionPage({ onNavigate }) {
   };
 
   return (
-    <div className="container animate-fade-in" style={{ paddingBottom: '120px', position: 'relative' }}>
+    <div className="container animate-fade-in" style={{ paddingBottom: '40px', position: 'relative' }}>
       
       {/* Dim Background Overlay when Payment Modal is Open */}
       {showPaymentModal && (
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(2, 6, 23, 0.7)', backdropFilter: 'blur(10px)', zIndex: 40 }}></div>
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(2, 6, 23, 0.7)', backdropFilter: 'blur(10px)', zIndex: 40 }}></div>
       )}
 
       <div className="header animate-slide-up" style={{ marginBottom: '32px', textAlign: 'left' }}>
@@ -85,7 +85,7 @@ export default function PlanSelectionPage({ onNavigate }) {
               style={{
                 border: isSelected ? '1.5px solid var(--accent-primary)' : '1px solid var(--border-color)',
                 background: isSelected ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(15, 23, 42, 0.5))' : 'var(--surface-glass)',
-                padding: '28px', cursor: 'pointer', position: 'relative',
+                padding: '20px', cursor: 'pointer', position: 'relative',
                 transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                 boxShadow: isSelected ? '0 10px 40px var(--accent-glow)' : '0 10px 30px rgba(0,0,0,0.3)',
                 transform: isSelected ? 'scale(1.02)' : 'scale(1)',
@@ -113,10 +113,10 @@ export default function PlanSelectionPage({ onNavigate }) {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
               )}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px', flexWrap: 'wrap', gap: '8px' }}>
                 <div>
-                  <h3 style={{ fontSize: '1.5rem', margin: 0, color: 'var(--text-primary)' }}>{plan.name}</h3>
-                  <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 700 }}>Weekly Policy</div>
+                  <h3 style={{ fontSize: '1.3rem', margin: 0, color: 'var(--text-primary)' }}>{plan.name}</h3>
+                  <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '4px', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 700 }}>Weekly Policy</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <span style={{ fontSize: '1.8rem', fontWeight: '800', color: isSelected ? 'var(--accent-hover)' : 'var(--accent-primary)' }}>
@@ -154,9 +154,9 @@ export default function PlanSelectionPage({ onNavigate }) {
       {/* Payment Gateway Modal Mockup */}
       {showPaymentModal && (
         <div className="animate-slide-up" style={{
-          position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '90%', maxWidth: '380px',
+          position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 'calc(100% - 48px)', maxWidth: '380px',
           background: 'var(--surface-glass)', border: '1px solid var(--border-color)', backdropFilter: 'blur(30px)', WebkitBackdropFilter: 'blur(30px)',
-          borderRadius: '24px', padding: '28px', boxShadow: '0 20px 60px rgba(0,0,0,0.6)', zIndex: 50
+          borderRadius: '24px', padding: '24px', boxShadow: '0 20px 60px rgba(0,0,0,0.6)', zIndex: 50
         }}>
           <h3 style={{ fontSize: '1.4rem', color: 'white', marginBottom: '8px' }}>Secure Checkout</h3>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '24px' }}>Authorize your unified mandate via UPI or Card.</p>
