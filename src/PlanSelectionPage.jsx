@@ -154,7 +154,7 @@ export default function PlanSelectionPage({ onNavigate }) {
       {/* Payment Gateway Modal Mockup */}
       {showPaymentModal && (
         <div className="animate-slide-up" style={{
-          position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 'calc(100% - 48px)', maxWidth: '380px',
+          position: 'fixed', top: '50%', left: '24px', right: '24px', transform: 'translateY(-50%)',
           background: 'var(--surface-glass)', border: '1px solid var(--border-color)', backdropFilter: 'blur(30px)', WebkitBackdropFilter: 'blur(30px)',
           borderRadius: '24px', padding: '24px', boxShadow: '0 20px 60px rgba(0,0,0,0.6)', zIndex: 50
         }}>
