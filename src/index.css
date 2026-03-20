@@ -144,3 +144,4 @@ p { color: var(--text-secondary); }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: hidden; width: 100%; }

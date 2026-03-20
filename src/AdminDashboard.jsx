@@ -75,12 +75,10 @@ export default function AdminDashboard({ onNavigate }) {
         </div>
       </div>
 
-      <div className="bottom-action animate-slide-up delay-400" style={{ position: 'fixed', bottom: 0, left: 0, right: 0, padding: '24px', background: 'linear-gradient(to top, var(--bg-color) 60%, transparent)', display: 'flex', justifyContent: 'center' }}>
-        <div style={{ width: '100%', maxWidth: '432px' }}>
-          <button onClick={() => onNavigate('dashboard')} className="button-primary" style={{ background: 'var(--surface-color)', border: '1.5px solid var(--border-color)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', color: 'white' }}>
+      <div className="bottom-action animate-slide-up delay-400" style={{ position: 'fixed', bottom: 0, left: '16px', right: '16px', padding: '20px 0', background: 'linear-gradient(to top, var(--bg-color) 60%, transparent)', display: 'flex', justifyContent: 'center', maxWidth: '480px', margin: '0 auto' }}>
+          <button onClick={() => onNavigate('dashboard')} className="button-primary" style={{ background: 'var(--surface-color)', border: '1.5px solid var(--border-color)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', color: 'white', width: '100%' }}>
             Return to User Dashboard
           </button>
-        </div>
       </div>
     </div>
   );

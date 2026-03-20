@@ -522,7 +522,7 @@ export default function DashboardPage({ onNavigate }) {
           </button>
       </div>
 
-      <button onClick={() => setIsChatOpen(prev => !prev)} style={{ position: 'fixed', bottom: '24px', right: '24px', width: '64px', height: '64px', borderRadius: '20px', background: 'var(--accent-gradient)', color: 'white', border: 'none', boxShadow: '0 10px 40px var(--accent-glow)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100, transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)', transform: isChatOpen ? 'scale(0.9) rotate(90deg)' : 'scale(1) rotate(0deg)' }}>
+      <button onClick={() => setIsChatOpen(prev => !prev)} style={{ position: 'fixed', bottom: '24px', right: '16px', width: '56px', height: '56px', borderRadius: '18px', background: 'var(--accent-gradient)', color: 'white', border: 'none', boxShadow: '0 10px 40px var(--accent-glow)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100, transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)', transform: isChatOpen ? 'scale(0.9) rotate(90deg)' : 'scale(1) rotate(0deg)' }}>
         {isChatOpen ? (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         ) : (
@@ -531,7 +531,7 @@ export default function DashboardPage({ onNavigate }) {
       </button>
 
       {isChatOpen && (
-        <div className="animate-slide-up" style={{ position: 'fixed', bottom: '104px', right: '24px', width: 'calc(100% - 48px)', maxWidth: '380px', height: '500px', background: 'var(--surface-glass)', backdropFilter: 'blur(30px)', WebkitBackdropFilter: 'blur(30px)', borderRadius: '24px', border: '1px solid var(--border-color)', boxShadow: '0 20px 50px rgba(0,0,0,0.4)', zIndex: 99, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+        <div className="animate-slide-up" style={{ position: 'fixed', bottom: '96px', left: '16px', right: '16px', height: '450px', maxHeight: 'calc(100vh - 130px)', background: 'var(--surface-glass)', backdropFilter: 'blur(30px)', WebkitBackdropFilter: 'blur(30px)', borderRadius: '20px', border: '1px solid var(--border-color)', boxShadow: '0 20px 50px rgba(0,0,0,0.4)', zIndex: 99, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div style={{ padding: '20px', background: 'var(--surface-light)', borderBottom: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '12px' }}>
             <div style={{ width: '40px', height: '40px', borderRadius: '12px', background: 'var(--accent-gradient)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
